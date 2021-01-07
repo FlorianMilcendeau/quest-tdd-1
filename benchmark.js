@@ -19,9 +19,7 @@ function capitalizeFirst(input) {
  * @param {string} input Input string
  */
 function capitalizeFirstRefactored(input) {
-  return input.length > 0
-    ? input[0].toUpperCase() + input.slice(1)
-    : '';
+  return input.length > 0 ? input[0].toUpperCase() + input.slice(1) : '';
 }
 
 /**
@@ -42,7 +40,7 @@ const benchmark = (label, fn, ...rest) => {
   // Compute milliseconds diff between end and start timestamps
   const diff = dateEnd.getTime() - dateStart.getTime();
   console.log(label, diff + 'ms');
-}
+};
 
 benchmark('naive implementation', capitalizeFirst, 'javaScript');
 benchmark('improved implementation', capitalizeFirstRefactored, 'javaScript');
